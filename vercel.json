@@ -1,15 +1,13 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "./packages/server/src/index.ts",
-            "use": "@vercel/node"
+    "$schema": "https://turbo.build/schema.json",
+    "pipeline": {
+        "build": {
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**"]
+        },
+        "test": {},
+        "dev": {
+            "cache": false
         }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "./packages/server/src/index.ts"
-        }
-    ]
+    }
 }
