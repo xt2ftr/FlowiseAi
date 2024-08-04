@@ -1,5 +1,5 @@
 {
     "version": 2,
-    "builds": [{"dependsOn": "^build", "outputs": "dist/**"}],
+    "builds": [{"src": "packages/server/bin/dev", "outputs": "dist/**"}],
     "routes": [{"src": "packages/server/src/routes/index.ts", "dest": "/"}]
 }
