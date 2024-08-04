@@ -1,1 +1,5 @@
-{ "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/packages/server/src/index.ts" }] }
+{
+    "version": 2,
+    "builds": [{"src": "packages/server/bin/dev", "use": "@vercel/node"}],
+    "routes": [{"src": "packages/server/src/routes/index.ts", "dest": "/"}]
+}
